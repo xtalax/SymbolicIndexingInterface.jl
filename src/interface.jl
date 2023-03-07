@@ -160,3 +160,22 @@ function get_deps_of_observed(store)
 
     return deps
 end
+
+"""
+$(TYPEDSIGNATURES)
+
+Convert an expression to getindex calls. Default to returning the expression unchanged.
+"""
+function convert_to_getindex end
+
+convert_to_getindex(::Any, expr) = expr
+
+"""
+$(TYPEDSIGNATURES)
+
+Test if the given expression is a symbolic expression. Default to returning `false`.
+"""
+
+function is_symbolic_expr end
+
+is_symbolic_expr(expr) = false
