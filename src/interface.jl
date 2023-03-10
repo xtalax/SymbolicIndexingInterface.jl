@@ -179,3 +179,13 @@ Test if the given expression is a symbolic expression. Default to returning `fal
 function is_symbolic_expr end
 
 is_symbolic_expr(expr) = false
+
+"""
+$(TYPEDSIGNATURES)
+
+Unwrap if the input isa Num, pass through otherwise.
+"""
+
+function safe_unwrap end
+
+safe_unwrap(x) = x
